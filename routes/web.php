@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,12 +15,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $pageTitle = "Welcome to Boolean!";
-    $menuItems = [
-        "Our Team",
-        "About Us",
-        "Our Classes",
-        "Contacts"
+    $data = [
+        "pageTitle" => "Welcome to Boolean!",
+        "menuItems" => [
+            "Our Team",
+            "Our Classes",
+            "Contacts"
+        ]
     ];
-    return view('home', compact("pageTitle", "menuItems"));
+    return view('home', $data);
+});
+
+Route::get('/our-team', function () {
+    $data = [
+        "teachers" => "Olga Demina",
+        "tutors" => [
+            "Marco Acciarri",
+            "Mauro Constantinescu"
+        ],
+        "service" => [
+            "Adriano Grimaldi",
+            "Eugenia Faiola",
+            "Andrea Ricci"
+        ]
+    ];
+    return view('team', $data);
 });

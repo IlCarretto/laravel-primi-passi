@@ -18,6 +18,12 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
+
+        li {
+            list-style: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -26,9 +32,15 @@
         <div class="container">
             <h1 class="text-center">{{ $pageTitle }}</h1>
             <div class="header-menu">
-                <ul>
-                    @foreach ($menuItem as $item)
-                        <li>{{ $item }}</li>
+                <ul class="d-flex justify-content-around mt-5">
+                    @foreach ($menuItems as $item)
+                        <li>
+                            <a
+                                href="@foreach ($menuItems as $item)
+                            {{ $item }} @endforeach">
+                                {{ $item }}
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </div>
