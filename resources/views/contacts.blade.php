@@ -37,27 +37,13 @@
 
 <body>
     <div class="container">
-        <h2 class="text-center mb-5">Il nostro team!</h2>
+        <h2 class="text-center mb-5">I nostri studenti!</h2>
         <div class="team d-flex justify-content-around">
-            <div class="teachers">
-                <h3>I nostri insegnanti!</h3>
+            <div class="students">
+                <h3>Classe 73</h3>
                 <ul>
-                    <li>{{ $teachers }}</li>
-                </ul>
-            </div>
-            <div class="tutors">
-                <h3>I nostri tutors!</h3>
-                <ul>
-                    @foreach ($tutors as $tutor)
-                        <li>{{ $tutor }}</li>
-                    @endforeach
-                </ul>
-            </div>
-            <div class="service">
-                <h3>Coordinatori e Career Service</h3>
-                <ul>
-                    @foreach ($services as $service)
-                        <li>{{ $service }}</li>
+                    @foreach ($socials as $social)
+                        <li>{{ $social }}</li>
                     @endforeach
                 </ul>
             </div>

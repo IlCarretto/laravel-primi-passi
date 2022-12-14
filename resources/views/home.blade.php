@@ -24,6 +24,11 @@
             font-size: 1.6rem;
             cursor: pointer;
         }
+
+        a {
+            text-decoration: none;
+            color: unset;
+        }
     </style>
 </head>
 
@@ -35,10 +40,8 @@
                 <ul class="d-flex justify-content-around mt-5">
                     @foreach ($menuItems as $item)
                         <li>
-                            <a
-                                href="@foreach ($menuItems as $item)
-                            {{ $item }} @endforeach">
-                                {{ $item }}
+                            <a href="{{ $item['hrefItem'] }}">
+                                {{ $item['menuItem'] }}
                             </a>
                         </li>
                     @endforeach
