@@ -37,10 +37,10 @@
 
 <body>
     <div class="container">
-        <h2 class="text-center mb-5">I nostri studenti!</h2>
+        <h2 class="text-center mb-5">I nostri contatti</h2>
         <div class="team d-flex justify-content-around">
-            <div class="students">
-                <h3>Classe 73</h3>
+            <div class="socials">
+                <h3>Potete trovarci qui!</h3>
                 <ul>
                     @foreach ($socials as $social)
                         <li>{{ $social }}</li>

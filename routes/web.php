@@ -19,15 +19,15 @@ Route::get('/', function () {
         "pageTitle" => "Welcome to Boolean!",
         "menuItems" => [
             [
-                "menuItem" => "Our Team",
+                "htmlItem" => "Our Team",
                 "hrefItem" => "/our-team"
             ],
             [
-                "menuItem" => "Our Class",
+                "htmlItem" => "Our Class",
                 "hrefItem" => "/our-class"
             ],
             [
-                "menuItem" => "Contacts",
+                "htmlItem" => "Contacts",
                 "hrefItem" => "/contacts"
             ]
         ],

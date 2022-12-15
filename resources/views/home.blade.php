@@ -41,7 +41,7 @@
                     @foreach ($menuItems as $item)
                         <li>
                             <a href="{{ $item['hrefItem'] }}">
-                                {{ $item['menuItem'] }}
+                                {{ $item['htmlItem'] }}
                             </a>
                         </li>
                     @endforeach
